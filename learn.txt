@@ -1,0 +1,26 @@
+-- make a django application 
+python -m venv venv
+venv/Scripts/activate
+pip install django djangorestframework
+django-admin startproject django_test . (start project)
+python manage.py migrate     
+python manage.py startapp api   -- ( making new apps)
+
+venv/Scripts/activate  -- activate my virtual env
+
+python manage.py ( leads to subcommands)
+
+python manage.py runserver
+
+-- making new apps 
+everytime this happens it has to be added inside 
+installed_apps inside settings.py
+
+-- views is used for request and response 
+
+-- the following is the debug toolbar 
+https://django-debug-toolbar.readthedocs.io/en/latest/
+
+-- django field types:
+https://docs.djangoproject.com/en/5.2/ref/models/fields/
+
