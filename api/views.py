@@ -6,7 +6,7 @@ from store.models import Product
 
 def say_hello(request):
 
-    queryset = Product.objects.filter(unit_price__range=(100, 200))
+    queryset = Product.objects.values('id','title','collection__title').order_by('title')[0:10]
 
 
     
