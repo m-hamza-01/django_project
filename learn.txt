@@ -24,3 +24,23 @@ https://django-debug-toolbar.readthedocs.io/en/latest/
 -- django field types:
 https://docs.djangoproject.com/en/5.2/ref/models/fields/
 
+-- after the set up of mysql install the following:
+pipenv install mysqlclient 
+
+
+--go to settings.py inside your main module and then change the database, and set your password
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_test',
+        'HOST':'localhost',
+        'USER':'root',
+        'PASSWORD': '222378'
+
+    }
+}
+
+-- mockaroo.com ( is used for making dummy data)
+
+django official documentation to check: 
+-- https://docs.djangoproject.com/en/5.2/ref/contrib/admin/ 

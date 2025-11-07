@@ -16,7 +16,7 @@ class Product(models.Model):
     slug=models.SlugField()
     description = models.TextField()
     unit_price=models.DecimalField(max_digits=6,decimal_places=2)
-    ibventory =models.IntegerField()
+    inventory =models.IntegerField()
     last_update=models.DateTimeField(auto_now_add=True)
     collection=models.ForeignKey(Collection, on_delete=models.PROTECT)
     promotions=models.ManyToManyField(Promotion)
@@ -34,7 +34,7 @@ class Customer(models.Model):
     last_name =models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone=models.CharField(max_length=255)
-    birth_rate = models.DateField(null=True)
+    birth_date = models.DateField(null=True)
     membership=models.CharField(max_length=1, choices= MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
 
     class Meta:
