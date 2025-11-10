@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Count, Max
 from store.models import Product, OrderItem
 
 # Create your views here.
